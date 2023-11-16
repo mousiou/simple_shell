@@ -17,7 +17,7 @@ extern char **environ;
 char *read_line(void);
 char **tokenizer(char *line);
 int _execute(char **command, char **argv, int idx);
-char *_getenv(get *variable);
+char *_getenv(char *variable);
 char *_getpath(char *command);
 
 int is_builtin(char *command);

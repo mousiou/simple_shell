@@ -20,7 +20,7 @@ len++;
 str++;
 }
 str = str - len;
-ptr = malloc(szeof(char) * (len + 1));
+ptr = malloc(sizeof(char) * (len + 1));
 if (ptr == NULL)
 {
 return (NULL);

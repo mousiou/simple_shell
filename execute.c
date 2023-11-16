@@ -25,7 +25,7 @@ return (127);
 child = fork();
 if (child == 0)
 {
-if (execve(full_cmd, command[0], command, environ) == -1)
+if (execve(full_cmd, command, environ) == -1)
 {
 free(full_cmd), full_cmd = NULL;
 freearr(command);

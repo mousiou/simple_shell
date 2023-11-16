@@ -7,7 +7,7 @@
  * Return: the value of the specified environment
  * variable, or NULL if not found.
  */
-char *_getenv(get *variable)
+char *_getenv(char *variable)
 {
 char *tmp, *key, *value, *env;
 int i;

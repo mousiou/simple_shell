@@ -17,6 +17,7 @@ for (i = 0; builtins[i]; i++)
 {
 if (_strcmp(command, builtins[i]) == 0)
 	return (1);
+}
 return (0);
 }
 /**
@@ -33,6 +34,9 @@ return (0);
  */
 void handle_builtin(char **command, char **argv, int *status, int idx)
 {
+(void) argv;
+(void)idx;
+
 if (_strcmp(command[0], "exit") == 0)
 {
 exit_shell(command, status);
@@ -40,6 +44,7 @@ exit_shell(command, status);
 else if (_strcmp(command[0], "env") == 0)
 {
 print_env(command, status);
+}
 }
 /**
  * exit_shell - This function exits the shell.
@@ -73,5 +78,5 @@ write(STDOUT_FILENO, environ[i], _strlen(environ[i]));
 write(STDOUT_FILENO, "\n", 1);
 }
 freearr(command);
-status = 0;
+(*status) = 0;
 }
